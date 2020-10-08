@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "reservacion-restaurante-pdm"
+    }
+  },
+  "defaultProject": "reservacion-restaurante-pdm",
+  "cli": {
+    "analytics": "3caab2e4-3d1a-4e5b-8745-c8e3dca38bb8"
+  }
 }
