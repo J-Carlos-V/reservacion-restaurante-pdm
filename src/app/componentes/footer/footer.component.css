@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 .bg-grey {
     background: #292929;
  }
@@ -32,8 +33,9 @@ bottom: -20px;
             border: 1px solid;
             border-radius: 43px;
             font-size: 13px;
-            padding: 7px 30px;
-            line-height: 47px;
+            padding: 10px 10px;
+            line-height: 40px;
+            margin: 2px;
  }
  .btn-footer:hover {
             
@@ -61,12 +63,6 @@ outline: none;
 border-radius: 0 16px 16px 0;
 padding: 2px 12px;
 }
- .social .fa {
-color: grey;
-font-size: 22px;
-padding: 10px 15px;
-background: #3c3c3c;
-}
  footer ul li {
 list-style: none;
 display: block;
@@ -88,3 +84,32 @@ color: #f5f5f5 !important;
 border-right: 1px solid white;
 height: 100%;
 }
+ .container-fluid {
+     overflow: hidden;
+     margin-top: 250px;
+     background: #262626;
+     color: #627482 !important;
+     margin-bottom: 0;
+     padding-bottom: 0
+ }
+
+ small {
+     font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+ }
+
+ .bold-text {
+     color: #989c9e !important
+ }
+
+ .mt-55 {
+     margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+ }
+
+ h3 {
+     font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+ }
+
+ .rights {
+     font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+ }
+ 
