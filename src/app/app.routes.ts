@@ -1,15 +1,16 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { PruebaComponent } from './componentes/prueba/prueba.component';
+import { SliderComponent } from './componentes/slider/slider.component';
 import { ReservacionComponent } from './componentes/reservacion/reservacion.component';
-// import { Name3Component } from './';
+import { AboutComponent } from './componentes/about/about.component';
 // import { Name4Component } from './';
 // import { PageNotFoundComponent } from './';
 
 const app_routes: Routes = [
-    { path: 'home', component: PruebaComponent },
+    { path: 'home', component: SliderComponent },
     { path: 'reservacion', component: ReservacionComponent},
+    { path: 'about', component: AboutComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home'},
 
     //{ path: 'path/:routeParam', component: MyComponent },

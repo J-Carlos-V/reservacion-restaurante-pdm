@@ -14,6 +14,7 @@ import { from } from 'rxjs';
 import { ReservacionComponent } from './componentes/reservacion/reservacion.component';
 import { PruebaComponent } from './componentes/prueba/prueba.component';
 import { SliderComponent } from './componentes/slider/slider.component';
+import { AboutComponent } from './componentes/about/about.component';
 
 
 
@@ -24,7 +25,8 @@ import { SliderComponent } from './componentes/slider/slider.component';
     FooterComponent,
     ReservacionComponent,
     PruebaComponent,
-    SliderComponent
+    SliderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
