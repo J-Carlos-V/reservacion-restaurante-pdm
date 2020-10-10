@@ -1,115 +1,126 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 .bg-grey {
     background: #292929;
- }
- .logo-footer {
+}
+
+.logo-footer {
     margin-bottom: 40px;
- }
- footer {
-        color: grey;
- }
- footer p, a {
-font-size: 12px;
-font-family: 'Roboto', sans-serif;
 }
+
+footer {
+    color: grey;
+}
+
+footer p,
+a {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
 footer h6 {
-font-family: 'Playfair Display', serif;
-margin-bottom: 40px;
-position: relative;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+    position: relative;
 }
+
 footer h6:after {
-position: absolute;
-content: "";
-background: grey;
-width: 12%;
-height: 1px;
-left: 0;
-bottom: -20px;
+    position: absolute;
+    content: "";
+    background: grey;
+    width: 12%;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
 }
- .btn-footer {
-             color: grey;
-          
-            text-decoration: none;
-            border: 1px solid;
-            border-radius: 43px;
-            font-size: 13px;
-            padding: 10px 10px;
-            line-height: 40px;
-            margin: 2px;
- }
- .btn-footer:hover {
-            
-            text-decoration: none;
-           
- }
+
+.btn-footer {
+    color: grey;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 43px;
+    font-size: 13px;
+    padding: 10px 10px;
+    line-height: 40px;
+    margin: 2px;
+}
+
+.btn-footer:hover {
+    text-decoration: none;
+}
+
 .form-footer input[type="text"] {
     border: none;
-border-radius: 16px 0 0 16px;
-outline: none;
-padding-left: 10px;
-
+    border-radius: 16px 0 0 16px;
+    outline: none;
+    padding-left: 10px;
 }
+
 ::placeholder {
-font-size: 10px;
-padding-left: 10px;
-font-style: italic;
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
 }
+
 .form-footer input[type="button"] {
-border: none;
-background:#232323;
+    border: none;
+    background: #232323;
     margin-left: -5px;
-color: #fff;
-outline: none;
-border-radius: 0 16px 16px 0;
-padding: 2px 12px;
+    color: #fff;
+    outline: none;
+    border-radius: 0 16px 16px 0;
+    padding: 2px 12px;
 }
- footer ul li {
-list-style: none;
-display: block;
+
+footer ul li {
+    list-style: none;
+    display: block;
 }
-footer ul  {
-padding-left: 0;
+
+footer ul {
+    padding-left: 0;
 }
-footer ul  li a{
-text-decoration: none;
-color: grey;
-text-decoration:none;
+
+footer ul li a {
+    text-decoration: none;
+    color: grey;
+    text-decoration: none;
 }
+
 a:hover {
-text-decoration: none;
-color: #f5f5f5 !important;
-
+    text-decoration: none;
+    color: #f5f5f5 !important;
 }
+
 .logo-part {
-border-right: 1px solid white;
-height: 100%;
+    border-right: 1px solid white;
+    height: 100%;
 }
- .container-fluid {
-     overflow: hidden;
-     margin-top: 250px;
-     background: #262626;
-     color: #627482 !important;
-     margin-bottom: 0;
-     padding-bottom: 0
- }
 
- small {
-     font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
- }
+.container-fluid {
+    overflow: hidden;
+    margin-top: 250px;
+    background: #262626;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
 
- .bold-text {
-     color: #989c9e !important
- }
+small {
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+}
 
- .mt-55 {
-     margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
- }
+.bold-text {
+    color: #989c9e !important
+}
 
- h3 {
-     font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
- }
+.mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+}
 
- .rights {
-     font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
- }
- 
+h3 {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+}
