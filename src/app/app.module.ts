@@ -13,6 +13,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { from } from 'rxjs';
 import { ReservacionComponent } from './componentes/reservacion/reservacion.component';
 import { PruebaComponent } from './componentes/prueba/prueba.component';
+import { SliderComponent } from './componentes/slider/slider.component';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { PruebaComponent } from './componentes/prueba/prueba.component';
     HeaderComponent,
     FooterComponent,
     ReservacionComponent,
-    PruebaComponent
+    PruebaComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
