@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "reservacion-restaurantepdm": {
+      "hosting": {
+        "reservacion-restaurante-pdm": [
+          "reservacion-restaurantepdm"
+        ]
+      }
+    }
+  }
+}

@@ -117,6 +117,10 @@
               "devServerTarget": "reservacion-restaurante-pdm:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
