@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-  apiKey: "AIzaSyAikdAbsqAWHzmZj9ofgXjfA1jWamXfJcA",
-  authDomain: "reservacion-restaurantepdm.firebaseapp.com",
-  databaseURL: "https://reservacion-restaurantepdm.firebaseio.com",
-  projectId: "reservacion-restaurantepdm",
-  storageBucket: "reservacion-restaurantepdm.appspot.com",
-  messagingSenderId: "1047904309173",
-  appId: "1:1047904309173:web:e4d8165db645277bb653fc"
+    apiKey: "AIzaSyAlMjBrWcmzElyyczbseDmdAfEAL-_vxxI",
+    authDomain: "reservaciones-donmundo.firebaseapp.com",
+    databaseURL: "https://reservaciones-donmundo.firebaseio.com",
+    projectId: "reservaciones-donmundo",
+    storageBucket: "reservaciones-donmundo.appspot.com",
+    messagingSenderId: "547563065065",
+    appId: "1:547563065065:web:191f25e2c302375800aa78"
 },
 };
 

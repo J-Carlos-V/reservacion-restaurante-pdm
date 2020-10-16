@@ -6,6 +6,13 @@
           "reservacion-restaurantepdm"
         ]
       }
+    },
+    "reservaciones-donmundo": {
+      "hosting": {
+        "reservacion-restaurante-pdm": [
+          "reservaciones-donmundo"
+        ]
+      }
     }
   }
 }
