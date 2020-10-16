@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ConService } from '../../services/conexion.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
