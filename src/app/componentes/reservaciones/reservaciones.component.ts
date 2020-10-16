@@ -10,11 +10,11 @@ import { ConService } from '../../services/conexion.service';
 export class ReservacionesComponent implements OnInit {
   items: any;
   constructor(private con: ConService) {
-    this.con.retornarItems().subscribe(items =>{
+    this.con.retornarItems().subscribe(items => {
       this.items = items;
       console.log(this.items);
     });
-   }
+  }
 
   ngOnInit(): void {
   }
