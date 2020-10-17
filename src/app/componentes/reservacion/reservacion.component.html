@@ -51,6 +51,9 @@
                                             <div class="container-error-message" *ngIf="email.errors.minlength">
                                                 Email tiene que ser mayor a 11 caracteres
                                             </div>
+                                            <div class="container-error-message" *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.pattern">
+                                                Email no tiene un formato valido, verificalo
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
