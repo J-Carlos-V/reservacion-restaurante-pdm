@@ -24,6 +24,7 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { ReservacionesComponent } from './componentes/reservaciones/reservaciones.component';
+import { ContactComponent } from './componentes/contact/contact.component';
 
 
 
@@ -37,6 +38,7 @@ import { ReservacionesComponent } from './componentes/reservaciones/reservacione
     SliderComponent,
     AboutComponent,
     ReservacionesComponent,
+    ContactComponent,
 
   ],
   imports: [
