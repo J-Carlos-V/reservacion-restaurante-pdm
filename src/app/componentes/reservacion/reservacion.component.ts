@@ -61,7 +61,7 @@ export class ReservacionComponent implements OnInit {
     if (this.contacForm.valid) {
       this.ser.addItem(this.contacForm.value);
       this.onResetForm();
-      window.alert('Reservacion realizada con exito ');
+      window.alert('Reservacion realizada con exito, Si necesitas cancelar llama a este número 764 764 3040');
     } else {
       window.alert('Verifica tus datos ocurrio un error');
     }
