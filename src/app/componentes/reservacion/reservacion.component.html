@@ -20,7 +20,7 @@
                                                 Nombre obligatorio
                                             </div>
                                             <div class="container-error-message" *ngIf="firstname.errors.minlength">
-                                                Nombre tiene que ser mayor a 5 caracteres
+                                                Nombre tiene que ser mayor a 4 caracteres
                                             </div>
                                         </div>
 
@@ -35,7 +35,7 @@
                                                 Apellidos es obligatorio
                                             </div>
                                             <div class="container-error-message" *ngIf="surname.errors.minlength">
-                                                Apellidos tiene que ser mayor a 10 caracteres
+                                                Apellidos tiene que ser mayor a 8 caracteres
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +98,18 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group"> <label for="form_mesa">Mesa*</label> <select name="mesa" formControlName="mesa" class="form-control" required>
+                                            <option *ngFor="let mesas of mesasDisponible; let indice=index">{{mesas.numeroMesa}}</option>
+                                         </select> </div>
+
+                                    </div>
+                                </div>
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group"> <label for="form_person">¿ Mesa Para ?*</label> <input type="number" formControlName="personas" name="person" class="form-control" placeholder="Seleccione el número de personas para la reservación" min="1" max="10"
@@ -119,7 +130,7 @@
                       </label> <textarea formControlName="detalles" name="message" class="form-control" placeholder="¿Alguna atención especial? Escríbalo" rows="4"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 justify-content-center"> <button type="submit" class="btn btn-success btn-block center-block " onclick="mostrar()">Reservar ahora</button>
+                                    <div class="col-md-12 justify-content-center"> <button type="submit" class="btn btn-success btn-block center-block ">Reservar ahora</button>
                                     </div>
                                 </div>
                             </div>
