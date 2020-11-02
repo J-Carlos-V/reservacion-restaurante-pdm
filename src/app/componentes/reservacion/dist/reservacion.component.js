@@ -22,7 +22,7 @@ var ReservacionComponent = /** @class */ (function () {
             firstname: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(5)]),
             surname: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(10)]),
             email: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(5), forms_1.Validators.pattern(this.emailPattern)]),
-            number: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.maxLength(10), forms_1.Validators.minLength(10)]),
+            number: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(12), forms_1.Validators.maxLength(12)]),
             fecha: new forms_1.FormControl('', [forms_1.Validators.required]),
             hora: new forms_1.FormControl('', [forms_1.Validators.required]),
             personas: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(1)]),
