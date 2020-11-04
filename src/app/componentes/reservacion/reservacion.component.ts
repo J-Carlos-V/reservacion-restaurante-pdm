@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConService } from '../../services/conexion.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ReservacionComponent implements OnInit {
   public mesas: any = [];
   public mesasDisponible: any = [];
-  public mesaReservada: any = {Mesas: ''};
+  public mesaReservada: any = [];
   // tslint:disable-next-line:typedef
   private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   // tslint:disable-next-line:typedef
@@ -26,14 +27,13 @@ export class ReservacionComponent implements OnInit {
       personas: new FormControl('', [Validators.required, Validators.minLength(1)]),
       detalles: new FormControl('', [Validators.maxLength(100)]),
       estado: new FormControl('Pendiente'),
-      mesa: new FormControl(Validators.required)
+      mesa: new FormControl()
     });
   }
   // tslint:disable-next-line:member-ordering
   contacForm: FormGroup;
   constructor(private ser: ConService) {
     this.contacForm = this.createFormGroup();
-
     this.ser.retornarMesas().subscribe((res: any) => {
       this.mesas = res;
       for (const mesa of this.mesas) {
@@ -41,8 +41,19 @@ export class ReservacionComponent implements OnInit {
           this.mesasDisponible.push(mesa);
         }
       }
+      if (this.mesasDisponible.length === 0){
+        Swal.fire({
+          icon: 'error',
+          title: 'Reservaciones Agotadas',
+          text: 'No hay mesas disponibles, intentelo mas tarde',
+          confirmButtonText: 'OK'
+        // tslint:disable-next-line:typedef
+        // tslint:disable-next-line:only-arrow-functions
+        }).then(() => {
+          window.location.href = '/reservacion-restaurante-pdm/';
+        });
+      }
     });
-    console.log(this.mesasDisponible);
   }
   // tslint:disable-next-line:typedef
   ngOnInit() {
@@ -75,19 +86,34 @@ export class ReservacionComponent implements OnInit {
   }
   // tslint:disable-next-line:typedef
   agregar() {
+    if (this.contacForm.value.mesa == null){
+      this.contacForm.value.mesa = this.mesasDisponible[0].id;
+    }
     if (this.contacForm.valid) {
       this.ser.addItem(this.contacForm.value);
-      this.editarmesa(this.contacForm.value);
+      this.mesaReservada = { id: this.contacForm.value.mesa, numeroMesa: this.contacForm.value.mesa, estado: 'Reservado' };
+      this.ser.editarmesa(this.mesaReservada);
+      console.log(this.mesaReservada);
       this.onResetForm();
-      window.alert('Reservacion realizada con exito, Si necesitas cancelar llama a este número 764 764 3040');
+      Swal.fire({
+        icon: 'success',
+        title: 'Reservacion Exitosa',
+        text: 'Para cancelaciones o aclaraciones se puede comunicar al 764-764-3040',
+        confirmButtonText: 'OK'
+      }).then(() => {
+        window.location.href = '/reservacion-restaurante-pdm/';
+      });
     } else {
-      window.alert('Verifica tus datos ocurrio un error');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Verifica tus datos',
+      });
     }
   }
-
   // tslint:disable-next-line:typedef
-  editarmesa(mesa){
-    console.log(mesa);
+  reloadPage() {
+    window.location.reload();
   }
 
 }

@@ -64,8 +64,8 @@
                                                 Número de Telefono es obligatorio
                                             </div>
                                             <div class="container-error-message" *ngIf="number.errors.minlength || number.errors.maxlength">
-                                                El Número de telefono tiene que ser igual a  10 caracteres
-                                            </div>                                   
+                                                El Número de telefono tiene que ser igual a 10 caracteres
+                                            </div>
                                         </div>
 
                                     </div>
@@ -102,7 +102,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group"> <label for="form_mesa">Mesa*</label> <select name="mesa" formControlName="mesa" class="form-control" required>
+                                        <div class="form-group"> <label for="form_mesa">Mesa*</label> <select name="mesa" formControlName="mesa" class="form-control">
                                             <option *ngFor="let mesas of mesasDisponible; let indice=index">{{mesas.numeroMesa}}</option>
                                          </select> </div>
 

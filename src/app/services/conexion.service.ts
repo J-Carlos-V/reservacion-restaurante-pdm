@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument  } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import 'firebase/firestore';
 
 export interface Item { name: string; }
 export interface Mesas {name: string;}
@@ -13,6 +14,7 @@ export class ConService {
   private itemsCollection: AngularFirestoreCollection<Item>;
   items: Observable<Item[]>;
    private MesasCollection: AngularFirestoreCollection<Mesas>;
+   private itemDoc: AngularFirestoreDocument<Mesas>;
   mesas: Observable<Mesas[]>;
   constructor(private readonly afs: AngularFirestore) {
     this.itemsCollection = afs.collection<Item>('items');
@@ -42,6 +44,8 @@ addItem(item: Item) {
   this.itemsCollection.add(item);
 }
 // tslint:disable-next-line:typedef
-editarmesa(){
+editarmesa(item){
+this.itemDoc = this.afs.doc<Mesas>('mesas/' + item.id);
+this.itemDoc.update(item);
 }
 }

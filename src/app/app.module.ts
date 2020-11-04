@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
-
 //Routes
 import {app_routing} from './app.routes';
 
@@ -50,7 +49,7 @@ import { ContactComponent } from './componentes/contact/contact.component';
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
