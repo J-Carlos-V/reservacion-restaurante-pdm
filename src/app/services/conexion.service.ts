@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import 'firebase/firestore';
 
 export interface Item { name: string; }
-export interface Mesas {name: string;}
+export interface Mesas {name: string; }
  
 @Injectable({
   providedIn: 'root'
