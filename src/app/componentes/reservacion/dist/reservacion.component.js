@@ -53,7 +53,7 @@ var ReservacionComponent = /** @class */ (function () {
             hora: new forms_1.FormControl('', [forms_1.Validators.required]),
             personas: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(1)]),
             detalles: new forms_1.FormControl('', [forms_1.Validators.maxLength(100)]),
-            estado: new forms_1.FormControl('Pendiente'),
+            estado: new forms_1.FormControl('pendiente'),
             mesa: new forms_1.FormControl()
         });
     };

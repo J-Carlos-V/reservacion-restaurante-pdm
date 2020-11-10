@@ -26,7 +26,7 @@ export class ReservacionComponent implements OnInit {
       hora: new FormControl('', [Validators.required]),
       personas: new FormControl('', [Validators.required, Validators.minLength(1)]),
       detalles: new FormControl('', [Validators.maxLength(100)]),
-      estado: new FormControl('Pendiente'),
+      estado: new FormControl('pendiente'),
       mesa: new FormControl()
     });
   }
